@@ -21,7 +21,7 @@ classApp.controller('weatherCtrl',function($scope, $http){
       vm.temp=data.main.temp;
       vm.fTemp=(9/5*(vm.temp - 273) + 32).toFixed(1)+' (°F)';
       vm.cTemp=(vm.temp-273).toFixed(1)+' (°C)';
-      vm.icon="https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" +data.weather[0].icon+ ".png";
+      vm.icon="http://openweathermap.org/img/w/" +data.weather[0].icon+ ".png";
 
       switch(vm.description){
         case 'clear sky':
