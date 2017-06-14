@@ -8,7 +8,7 @@ classApp.controller('weatherCtrl',function($scope, $http){
     footer2: {name: 'Special thanks to Dylan', link:'https://www.youtube.com/user/pizzapokerguy87'}
     };
 
-  $http.get("http://ip-api.com/json").success(function(data){
+  $http.get("https://cors-anywhere.herokuapp.com/http://ip-api.com/json").success(function(data){
     vm.lat=data.lat;
     vm.lon=data.lon;
     var apiKey= "014f150ca852e9ea36fffb5e506c4616";
