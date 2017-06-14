@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>API Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Habibi|Nunito" rel="stylesheet">
+  </head>
+  <body ng-app='weatherApp' ng-controller='weatherCtrl' ng-style='weatherBackground'>
+    <h1>{{channelInfo.heading}}</h1>
+    <div>
+      <a>{{description}}
+        <img src='{{icon}}'/>
+      </a>
+      <a>{{speed}}</a>
+      <a>{{name}}</a>
+      <a ng-init='tempVal=true' ng-show='tempVal' ng-click='tempVal=!tempVal'>{{fTemp}}</a>
+      <a ng-show='!tempVal' ng-click='tempVal=!tempVal'>{{cTemp}}</a>
+    </div>
+
+    <footer>
+    <a href='{{channelInfo.footer1.link}}'>
+      {{channelInfo.footer1.name}}
+    </a>
+    <a href='{{channelInfo.footer2.link}}'>
+      {{channelInfo.footer2.name}}
+    </a>
+    </footer>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
