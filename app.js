@@ -8,7 +8,7 @@ classApp.controller('weatherCtrl',function($scope, $http){
     footer2: {name: 'Special thanks to Dylan', link:'https://www.youtube.com/user/pizzapokerguy87'}
     };
 
-  $http.get("http://freegeoip.net/json/").success(function(data){
+  $http.get("https://freegeoip.net/json/").success(function(data){
     vm.lat=data.latitude;
     vm.lon=data.longitude;
     var apiKey= "014f150ca852e9ea36fffb5e506c4616";
